@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-poster-bg font-sans text-white antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-poster-mint text-poster-bg;
+  }
+}
+
+@layer components {
+  .label-poster {
+    @apply font-display text-[0.65rem] font-bold uppercase tracking-[0.28em];
+  }
+
+  .btn-retro {
+    @apply inline-flex items-center justify-center gap-2 border-2 font-display text-[0.65rem] font-bold uppercase tracking-[0.28em] transition-all duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-poster-mint active:scale-[0.98];
+  }
+
+  .btn-retro-mint {
+    @apply border-poster-mint bg-poster-mint px-4 py-3 text-poster-bg hover:-translate-y-0.5 hover:border-poster-pink hover:bg-poster-pink hover:shadow-[6px_6px_0_#00ca9a] active:translate-y-0 active:shadow-none sm:px-5;
+  }
+
+  .btn-retro-outline {
+    @apply border-white/25 px-4 py-3 text-white hover:-translate-y-0.5 hover:border-poster-mint hover:text-poster-mint hover:shadow-[5px_5px_0_rgba(0,202,154,0.35)] active:translate-y-0 active:shadow-none sm:px-5;
+  }
+
+  .btn-retro-ink {
+    @apply border-poster-bg px-4 py-3 text-poster-bg hover:-translate-y-0.5 hover:bg-poster-bg hover:text-poster-mint hover:shadow-[6px_6px_0_#f596aa] active:translate-y-0 active:shadow-none sm:px-5;
+  }
+}
+
+@layer utilities {
+  .writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .text-outline-poster {
+    -webkit-text-stroke: 1px rgb(18 44 56 / 0.55);
+    color: transparent;
+  }
+
+  .bg-grid-poster {
+    background-image:
+      linear-gradient(rgb(0 202 154 / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(0 202 154 / 0.1) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    top: -2%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 102%;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,6 +1,6 @@
 const siteUrl = (
   process.env.NUXT_PUBLIC_SITE_URL ??
-  "https://portofolio-bitsy-s-projects.vercel.app"
+  "https://portofolio-bice-mu-50.vercel.app"
 ).replace(/\/$/, "");
 
 const title =

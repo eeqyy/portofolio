@@ -4,6 +4,8 @@ Portofolio pribadi dengan gaya **Neo-Retro Poster / Editorial**: teks poster
 raksasa, aksen mint–pink, dan hero 3D interaktif. Dibangun dengan Nuxt 3 (SSR)
 dan siap dideploy ke Vercel, Netlify, atau Node server.
 
+Live: [portofolio-bice-mu-50.vercel.app](https://portofolio-bice-mu-50.vercel.app)
+
 ## Tech stack
 
 - **Nuxt 3.21** + Vue 3.5 + TypeScript
@@ -39,9 +41,9 @@ npm run generate    # opsi static generate
 | `NUXT_PUBLIC_SITE_URL` | `https://domain-kamu.com` | Canonical, `og:url`, dan URL absolut `og:image` |
 
 Nilai default di `nuxt.config.ts` adalah
-`https://portofolio-bitsy-s-projects.vercel.app`. Ganti dengan domain produksi
-sebelum build. `NUXT_PUBLIC_SITE_URL` dibaca saat build, jadi set juga di
-environment hosting lalu redeploy.
+`https://portofolio-bice-mu-50.vercel.app`. Ganti dengan domain produksi sebelum
+build. `NUXT_PUBLIC_SITE_URL` dibaca saat build, jadi set juga di environment
+hosting lalu redeploy.
 
 ## Push ke GitHub (eeqyy)
 

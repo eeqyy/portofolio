@@ -38,10 +38,10 @@ npm run generate    # opsi static generate
 | --- | --- | --- |
 | `NUXT_PUBLIC_SITE_URL` | `https://domain-kamu.com` | Canonical, `og:url`, dan URL absolut `og:image` |
 
-Nilai default di `nuxt.config.ts` adalah placeholder
-`https://rizkidzulfikar.vercel.app`. Ganti dengan domain produksi sebelum build.
-`NUXT_PUBLIC_SITE_URL` dibaca saat build, jadi set juga di environment hosting
-lalu redeploy.
+Nilai default di `nuxt.config.ts` adalah
+`https://portofolio-bitsy-s-projects.vercel.app`. Ganti dengan domain produksi
+sebelum build. `NUXT_PUBLIC_SITE_URL` dibaca saat build, jadi set juga di
+environment hosting lalu redeploy.
 
 ## Push ke GitHub (eeqyy)
 

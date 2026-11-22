@@ -7,11 +7,11 @@ const title =
   "Rizki Dzulfikar Al-Qatiri — Full-Stack Developer & Design Enthusiast";
 
 const description =
-  "Portofolio web neo-retro Rizki Dzulfikar (Eki). Full-stack developer dari Garut yang mengeksplorasi 3D Web, AI Innovations, dan pendiri Xora Tech.";
+  "Portofolio Rizki Dzulfikar (Eki), full-stack developer dari Garut. Jelajahi karya, eksperimen web interaktif, dan visi Xora Tech.";
 
 const ogImage = `${siteUrl}/og-image.jpg`;
 const ogImageAlt =
-  "Poster portofolio Rizki Dzulfikar Al-Qatiri dengan torus knot 3D pink di atas latar teal.";
+  "Gambar pratinjau portofolio Rizki Dzulfikar Al-Qatiri.";
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
@@ -40,7 +40,6 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      Syne: [700, 800],
       Merriweather: [400, 700],
       "Plus Jakarta Sans": [400, 500, 600, 700],
     },
@@ -65,7 +64,7 @@ export default defineNuxtConfig({
         { name: "description", content: description },
         { name: "author", content: "Rizki Dzulfikar Al-Qatiri" },
         { name: "robots", content: "index, follow" },
-        { name: "theme-color", content: "#122c38" },
+        { name: "theme-color", content: "#f8faf9" },
 
         { property: "og:type", content: "website" },
         { property: "og:site_name", content: "Rizki Dzulfikar — Portfolio" },

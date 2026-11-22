@@ -1,8 +1,9 @@
 # Rizki Dzulfikar Al-Qatiri — Portfolio
 
-Portofolio pribadi dengan gaya **Neo-Retro Poster / Editorial**: teks poster
-raksasa, aksen mint–pink, dan hero 3D interaktif. Dibangun dengan Nuxt 3 (SSR)
-dan siap dideploy ke Vercel, Netlify, atau Node server.
+Portofolio pribadi bergaya editorial dengan ilustrasi pesisir untuk suasana
+siang dan malam. Pengunjung dapat mengganti suasana dan melihat sapuan cahaya
+mercusuar. Dibangun dengan
+Nuxt 3 (SSR) dan siap dideploy ke Vercel, Netlify, atau Node server.
 
 Live: [portofolio-bice-mu-50.vercel.app](https://portofolio-bice-mu-50.vercel.app)
 
@@ -10,9 +11,8 @@ Live: [portofolio-bice-mu-50.vercel.app](https://portofolio-bice-mu-50.vercel.ap
 
 - **Nuxt 3.21** + Vue 3.5 + TypeScript
 - **Tailwind CSS 3.4** (`@nuxtjs/tailwindcss`)
-- **TresJS 4** + Three.js untuk hero torus knot
-- **@vueuse/motion** untuk scroll reveal dan micro-interaction
-- **@nuxtjs/google-fonts** — Syne, Merriweather, Plus Jakarta Sans
+- **TresJS 4** + Three.js untuk sapuan cahaya mercusuar
+- **@nuxtjs/google-fonts** — Merriweather, Plus Jakarta Sans
 - **Nitro** — SSR node-server, Vercel, dan Netlify
 
 ## Menjalankan secara lokal
@@ -133,16 +133,15 @@ jika desain hero berubah.
 ## Struktur proyek
 
 ```text
-assets/css/main.css      Tailwind + utility poster + reduced-motion reset
+assets/css/main.css      Token visual editorial, layout responsif, reduced motion
 components/
-  AnimatedTorusKnot.vue  torus knot + render loop cleanup
-  CanvasSkeleton.vue     fallback Suspense 3D
-  ModelCanvas.vue        TresCanvas transparan + status WebGL
-  RetroCursor.vue        cursor desktop, pointer presisi
-  GrainOverlay.vue       noise overlay global
+  BeaconSweep.vue        berkas cahaya lembut yang berputar pada sumbu Y
 layouts/default.vue
-pages/index.vue          hero, about, projects, Xora, contact
+pages/index.vue          hero siang/malam, about, projects, Xora, contact
 public/og-image.jpg
+public/lighthouse-coast.jpg
+public/lighthouse-night.jpg
+public/profile-placeholder.svg
 nuxt.config.ts           modul, SEO/OG, runtimeConfig
 vercel.json
 netlify.toml
@@ -150,14 +149,13 @@ netlify.toml
 
 ## Catatan implementasi
 
-- 3D dimuat lazy dengan `defineAsyncComponent` + `<Suspense>`; chunk Three.js
-  tidak ikut preload halaman awal. Skeleton tampil selama chunk/WebGL dimuat.
-- Chunk 3D ±873 kB (gzip ±236 kB) dan masih memicu warning ukuran chunk saat
-  build; chunk tersebut terisolasi dan tidak memblokir render awal.
-- Animasi scroll memakai `visibleOnce` dari `@vueuse/motion` (setara
-  `slide-visible-once-bottom`) dengan stagger.
-- `prefers-reduced-motion` dihormati; listener cursor dan render loop dibersihkan
-  saat unmount.
+- Hero memakai ilustrasi siang dan malam di `public/`; kedua gambar crossfade
+  selama 2,4 detik saat mode diganti.
+- Di mode malam, cahaya Three.js berputar pada sumbu Y mercusuar; awan 3D,
+  kunang-kunang 3D, dan parallax pointer tidak dipakai.
+- Area foto profil memakai `public/profile-placeholder.svg` sampai foto pribadi
+  tersedia; ganti aset dan path pada `pages/index.vue` untuk menampilkan foto.
+- `prefers-reduced-motion` mengurangi transisi dan animasi cahaya.
 
 ## Kontak & sosial
 

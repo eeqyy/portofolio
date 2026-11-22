@@ -12,12 +12,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        "poster-bg": "#122c38",
-        "poster-mint": "#00ca9a",
-        "poster-pink": "#f596aa",
+        sky: "#cfe7f1",
+        "sky-ink": "#263c4a",
+        "sky-muted": "#627784",
+        "sky-accent": "#5b9fbd",
       },
       fontFamily: {
-        display: ["Syne", "Anton", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Merriweather", "Georgia", "serif"],
         accent: ["Merriweather", "Georgia", "serif"],
         sans: [
           '"Plus Jakarta Sans"',
